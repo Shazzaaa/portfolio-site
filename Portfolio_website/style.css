@@ -48,10 +48,6 @@
   position: fixed;
 }
 
-.enter-site-btn:hover {
-  background-color: aqua;
-}
-
 button {
   padding: 24px 180px;
   border: none;
@@ -74,52 +70,53 @@ button {
 /*-- about page--*/
 
 header {
+  position: relative;
   background-color: #121212;
-  padding: 14px 0 14px 0;
+  height: 70px;
   font-weight: 700;
 }
 
-.about-page {
-  display: flex;
+nav {
+  position: absolute;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.about-page li {
-  position: relative;
-  display: inline;
-}
-
-.about-page li a {
-  text-decoration: none;
-  color: white;
+nav li {
+  display: inline-block;
   margin: 30px;
 }
 
-.social-icons {
-  float: right;
+nav li a {
+  text-decoration: none;
+  color: white;
 }
 
-.social-icons ul li {
-  font-size: 30px;
+nav ul li a {
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 0;
+}
+
+nav li a:hover {
+  color: aquamarine;
+  transition: 1s;
 }
 
 .logo-text-small {
-  color: white;
-  display: flex;
+  display: inline-block;
+  position: absolute;
+  margin-left: 45%;
+  top: 5px;
 }
 
-.logo-text-small h1 {
-  padding-right: 250px;
+.logo-text-small a {
+  color: white;
   text-transform: uppercase;
-  font-size: 38px;
-}
-
-.logo-text-small h1 a {
-  color: white;
   text-decoration: none;
+  font-size: 38px;
 }
 
 .logo-text-small h1 a:hover {
@@ -127,7 +124,36 @@ header {
   transition: 1s;
 }
 
+.social-icons {
+  float: right;
+}
+
+.social-icons a {
+  float: right;
+  color: white;
+}
+
+.social-icons ul li {
+  font-size: 30px;
+  display: inline-block;
+}
+
+.social-icons ul li a {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.social-icons ul li a:hover {
+  color: aquamarine;
+  transition: 1s;
+}
+
 /*--background image--*/
+
+.container {
+  display: flex;
+}
 
 .image2 {
   position: relative;
@@ -138,7 +164,7 @@ header {
   position: absolute;
   left: 0;
   top: 0px;
-  width: 72.5%;
+  width: 100%;
   height: 100%;
   display: inline-block;
   background: -webkit-gradient(
@@ -154,29 +180,208 @@ header {
 /*--right side boxes--*/
 
 .boxes {
-  position: absolute;
-  display: flex;
-  background-color: pink;
-  width: 300px;
-  padding: 20px;
-  margin: 20px;
+  text-align: center;
+  float: right;
+  background-color: white;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.boxes a {
+  text-decoration: none;
+  color: white;
+}
+
+.boxes a:hover {
+  color: aquamarine;
+  transition: 1s;
 }
 
 .box-1 {
   color: #121212;
   background-color: white;
-  padding: 30px;
+  padding: 71px;
 }
 
-.box-1 color {
-  padding: 30px;
+.box-1 a {
+  color: #121212;
+  background-color: white;
 }
 
 .box-2 {
   color: white;
-  background-image: url(dfsf);
+  padding: 71px;
+  background-color: #121212;
 }
 
-/*--
+.box-3 {
+  color: white;
+  padding: 71px;
+  background-color: #121212;
+}
 
---*/
+/*--about text--*/
+
+.about-text {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.about-text h1 {
+  color: #f9f9f9;
+  font-size: 50px;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.about-text p {
+  color: #f9f9f9;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 30px;
+}
+
+/*--portfolio page--*/
+
+.container-portfolio {
+  display: flex;
+}
+
+.image3 {
+  position: relative;
+}
+
+.image3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(230, 73, 98, 0.7038165608040091)),
+    color-stop(50%, rgba(239, 136, 99, 0.7010154403558299)),
+    color-stop(100%, rgba(248, 217, 144, 0.7038165608040091))
+  );
+}
+
+/*--boxes on the right for portfolio--*/
+
+.boxes-portfolio {
+  text-align: center;
+  float: right;
+  background-color: white;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.boxes-portfolio a {
+  text-decoration: none;
+  color: white;
+}
+
+.boxes-portfolio a:hover {
+  color: #e64962;
+  transition: 1s;
+}
+
+.box-1-portfolio {
+  color: black;
+  background-color: #121212;
+  padding: 71px;
+}
+
+.box-2-portfolio {
+  color: #121212;
+  padding: 71px;
+}
+
+.box-2-portfolio a {
+  color: #121212;
+  background-color: white;
+}
+
+.box-3-portfolio {
+  color: white;
+  padding: 71px;
+  background-color: #121212;
+}
+
+/*--contact page--*/
+
+.container-contact {
+  display: flex;
+}
+
+.image4 {
+  position: relative;
+}
+
+.image4:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(241, 125, 200, 0.7962535355939251)),
+    color-stop(50%, rgba(222, 152, 208, 0.7290266448376226)),
+    color-stop(100%, rgba(248, 217, 144, 0.7290266448376226))
+  );
+}
+
+/*--boxes on the right for portfolio--*/
+
+.boxes-contact {
+  text-align: center;
+  float: right;
+  background-color: white;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.boxes-contact a {
+  text-decoration: none;
+  color: white;
+}
+
+.boxes-contact a:hover {
+  color: #de98d0;
+  transition: 1s;
+}
+
+.box-1-contact {
+  color: black;
+  background-color: #121212;
+  padding: 71px;
+}
+
+.box-2-contact {
+  color: white;
+  padding: 71px;
+  background-color: #121212;
+}
+
+.box-3-contact {
+  color: #121212;
+  padding: 71px;
+  background-color: white;
+}
+
+.box-3-contact a {
+  color: #121212;
+  background-color: white;
+}
