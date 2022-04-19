@@ -1,3 +1,3 @@
-# portfoliotestsite
+# portfolio-site
 coded website with other projects added
-This is my portfolio website where I will house. Once more complete I will make public, but for now this is just a test to see how to use github
+This is an ongoing project with HTML and CSS only to showcase any work/projects I am working on.
