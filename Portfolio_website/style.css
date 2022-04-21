@@ -4,10 +4,19 @@
   font-family: "Oswald", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 /*-- index - landing page --*/
 
-.main {
-  position: relative;
+.image img {
+  width: auto;
+  height: 90vh;
+  display: flex;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image:after {
@@ -17,7 +26,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  display: inline-block;
+  display: flex;
   background: -webkit-gradient(
     linear,
     left top,
@@ -30,30 +39,30 @@
 
 .logo-text {
   position: fixed;
-  font-size: 72px;
+  font-size: 54px;
   text-transform: uppercase;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .enter-site-btn {
-  position: absolute;
-  z-index: 100;
+  position: fixed;
+  z-index: 1;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  position: fixed;
-}
-
-button {
   padding: 24px 180px;
   border: none;
   border-radius: 60px;
   font-size: 40px;
   font-weight: 700;
+  white-space: nowrap;
+  padding-bottom: 30px;
 }
 
 .main button a {
@@ -74,19 +83,21 @@ header {
   background-color: #121212;
   height: 70px;
   font-weight: 700;
+  width: 100%;
+}
+
+.about-page {
+  align-items: center;
 }
 
 nav {
   position: absolute;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
 nav li {
   display: inline-block;
   margin: 30px;
+  padding-left: 20px;
 }
 
 nav li a {
@@ -156,7 +167,12 @@ nav li a:hover {
 }
 
 .image2 {
-  position: relative;
+  z-index: -1;
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image2:after {
@@ -180,8 +196,8 @@ nav li a:hover {
 /*--right side boxes--*/
 
 .boxes {
-  text-align: center;
-  float: right;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   width: 100%;
   font-size: 50px;
@@ -199,9 +215,12 @@ nav li a:hover {
 }
 
 .box-1 {
+  display: flex;
   color: #121212;
   background-color: white;
-  padding: 71px;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-1 a {
@@ -210,15 +229,21 @@ nav li a:hover {
 }
 
 .box-2 {
+  display: flex;
   color: white;
-  padding: 71px;
   background-color: #121212;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-3 {
+  display: flex;
   color: white;
-  padding: 71px;
   background-color: #121212;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--about text--*/
@@ -227,17 +252,18 @@ nav li a:hover {
   position: absolute;
   margin-left: 50px;
   margin-top: 70px;
+  width: 58%;
 }
 
 .about-text h1 {
-  color: #f9f9f9;
+  color: #3a3b3c;
   font-size: 50px;
-  text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 1px rgba(240, 240, 240, .8);
 }
 
 .about-text p {
-  color: #f9f9f9;
-  text-shadow: 2px 1px rgba(0, 0, 0, 0.3);
+  color: #3a3b3c;
+  text-shadow: 2px 1px rgba(240, 240, 240, .8);
   font-size: 24px;
   font-weight: 800;
   margin-top: 30px;
@@ -247,10 +273,13 @@ nav li a:hover {
 
 .container-portfolio {
   display: flex;
+  position: relative;
 }
 
 .image3 {
-  position: relative;
+  z-index: -1;
+  width: 70%;
+  height: auto;
 }
 
 .image3:after {
@@ -271,11 +300,20 @@ nav li a:hover {
   );
 }
 
+.javascript {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+
 /*--boxes on the right for portfolio--*/
 
 .boxes-portfolio {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  float: right;
   background-color: white;
   width: 100%;
   font-size: 50px;
@@ -295,12 +333,14 @@ nav li a:hover {
 .box-1-portfolio {
   color: black;
   background-color: #121212;
-  padding: 71px;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .box-2-portfolio {
   color: #121212;
-  padding: 71px;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .box-2-portfolio a {
@@ -310,8 +350,9 @@ nav li a:hover {
 
 .box-3-portfolio {
   color: white;
-  padding: 71px;
   background-color: #121212;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 /*--contact page--*/
@@ -321,7 +362,12 @@ nav li a:hover {
 }
 
 .image4 {
-  position: relative;
+  z-index: -1;
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image4:after {
@@ -342,15 +388,16 @@ nav li a:hover {
   );
 }
 
-/*--boxes on the right for portfolio--*/
+/*--boxes on the right for contacts--*/
 
 .boxes-contact {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  float: right;
   background-color: white;
   width: 100%;
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 500;;
 }
 
 .boxes-contact a {
@@ -366,22 +413,66 @@ nav li a:hover {
 .box-1-contact {
   color: black;
   background-color: #121212;
-  padding: 71px;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .box-2-contact {
   color: white;
-  padding: 71px;
   background-color: #121212;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .box-3-contact {
   color: #121212;
-  padding: 71px;
   background-color: white;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .box-3-contact a {
   color: #121212;
   background-color: white;
+}
+
+/*--contacts form--*/
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50%;
+}
+
+#contact-button {
+  color: #de98d0;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 900px) {
+  .boxes {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .logo-text {
+    font-size: 42px;
+  }
+
+  .enter-site-btn {
+    width: 50%;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 11px;
+  }
+
+  .social-icons ul li a {
+    font-size: 15px;
+  }
 }
