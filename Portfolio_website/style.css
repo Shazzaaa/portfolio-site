@@ -449,6 +449,30 @@ nav li a:hover {
   color: #de98d0;
 }
 
+.cursor {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #de98d0;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cursor__follower {
+  transition: transform .4s;
+  width: 10px;
+  height: 10px;
+}
+
+.cursor__follower__extra {
+  transition: transform .3s;
+  width: 10px;
+  height: 10px;
+  color: #e64962;
+}
+
 /* responsive */
 
 @media only screen and (max-width: 900px) {
@@ -463,9 +487,11 @@ nav li a:hover {
   }
 
   .enter-site-btn {
-    width: 50%;
-    justify-items: center;
-    text-align: center;
+    padding: 18px 120px;
+      border: none;
+      border-radius: 40px;
+      font-size: 30px;
+      font-weight: 600;
   }
 
   .social-icons {
@@ -475,4 +501,19 @@ nav li a:hover {
   .social-icons ul li a {
     font-size: 15px;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .enter-site-btn {
+      padding: 12px 90px;
+        border: none;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 400;
+  }
+
+    .logo-text {
+      font-size: 35px;
+    }
+
 }
